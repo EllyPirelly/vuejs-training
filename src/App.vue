@@ -6,7 +6,7 @@
     <!-- works the same way as above! -->
     <router-link :to="{ name: 'Home' }">Home</router-link>
     <span> | </span>
-    <router-link :to="{ name: 'About' }">About</router-link>
+    <router-link :to="{ name: 'Clock' }">Clock</router-link>
   </div>
   <router-view />
 </template>
