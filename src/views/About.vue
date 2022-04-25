@@ -14,6 +14,16 @@
       sed.
     </p>
     <BaseButton />
+    <br />
+    <div class="digiclock-wrapper">
+      <span class="testfont-monomono">12:30</span>
+      <span class="testfont-regular">00:15</span>
+    </div>
+    <br />
+    <p>
+      Zwei Uhren um die unterschiedlichen Schriftschnitte mal einzubinden. Es
+      sollte wenn nur eine genommen werden.
+    </p>
   </div>
 </template>
 
@@ -27,18 +37,41 @@ export default {
     BaseButton,
   },
 
-  methods: {
-    //
-  },
-
   data() {
     return {
       //
     }
   },
+
+  methods: {
+    //
+  },
 }
 </script>
 
 <style lang="scss">
-//
+.digiclock-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 16px;
+}
+
+.testfont-monomono,
+.testfont-regular {
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-size: 42px;
+  line-height: 1.5em;
+  padding: 15px;
+}
+
+.testfont-monomono {
+  font-family: 'digital-7_monomono', monospace;
+}
+
+.testfont-regular {
+  font-family: 'digital-7regular', monospace;
+}
 </style>
