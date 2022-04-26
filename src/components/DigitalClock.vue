@@ -1,10 +1,11 @@
 <template>
   <div class="digiclock-wrapper">
-    <span class="testfont-monomono">
-      {{ dateTime.hours }}:{{ dateTime.minutes }}:{{ dateTime.seconds }}
-    </span>
-    <span class="testfont-regular">
-      {{ dateTime.hours }}:{{ dateTime.minutes }}:{{ dateTime.seconds }}
+    <span class="digiclock-v1">
+      <span>{{ dateTime.hours }}</span>
+      <span>:</span>
+      <span>{{ dateTime.minutes }}</span>
+      <span>:</span>
+      <span>{{ dateTime.seconds }}</span>
     </span>
   </div>
 </template>
@@ -38,6 +39,14 @@ export default {
       }
     },
 
+    /*     setTime(date) {
+      const seconds = date.getSeconds()
+      const minutes = date.getMinutes()
+      const hours = date.getHours()
+
+      return { variable } < 10 ? `0${ variable }` : { variable }
+    } */
+
     setSeconds(date) {
       const seconds = date.getSeconds()
       return seconds < 10 ? `0${seconds}` : seconds
@@ -50,7 +59,7 @@ export default {
 
     setHours(date) {
       const hours = date.getHours()
-      return hours < 10 ? -`0${hours}` : hours
+      return hours < 10 ? `0${hours}` : hours
     },
   },
 
@@ -73,20 +82,12 @@ export default {
   row-gap: 16px;
 }
 
-.testfont-monomono,
-.testfont-regular {
+.digiclock-v1 {
   border: 2px solid #000;
   border-radius: 8px;
+  font-family: 'digital-7regular', monospace;
   font-size: 42px;
   line-height: 1.5em;
   padding: 15px;
-}
-
-.testfont-monomono {
-  font-family: 'digital-7_monomono', monospace;
-}
-
-.testfont-regular {
-  font-family: 'digital-7regular', monospace;
 }
 </style>
