@@ -27,39 +27,18 @@ export default {
     }
   },
 
-  // TODO: have method less verbose
-
   methods: {
     setDateTime() {
       const date = new Date()
       this.dateTime = {
-        hours: this.setHours(date),
-        minutes: this.setMinutes(date),
-        seconds: this.setSeconds(date),
+        hours: this.setLeadingZero(date.getHours()),
+        minutes: this.setLeadingZero(date.getMinutes()),
+        seconds: this.setLeadingZero(date.getSeconds()),
       }
     },
 
-    /*     setTime(date) {
-      const seconds = date.getSeconds()
-      const minutes = date.getMinutes()
-      const hours = date.getHours()
-
-      return { variable } < 10 ? `0${ variable }` : { variable }
-    } */
-
-    setSeconds(date) {
-      const seconds = date.getSeconds()
-      return seconds < 10 ? `0${seconds}` : seconds
-    },
-
-    setMinutes(date) {
-      const minutes = date.getMinutes()
-      return minutes < 10 ? `0${minutes}` : minutes
-    },
-
-    setHours(date) {
-      const hours = date.getHours()
-      return hours < 10 ? `0${hours}` : hours
+    setLeadingZero(leadingZero) {
+      return leadingZero < 10 ? `0${leadingZero}` : leadingZero
     },
   },
 
