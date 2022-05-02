@@ -1,30 +1,30 @@
 <template>
-  <div class="about">
-    <h1>Digital Clock</h1>
-    <p>Enter witty text here.</p>
-    <DigitalClock />
-  </div>
+    <div class="about">
+        <h1>Digital Clock</h1>
+        <p>Enter witty text here.</p>
+        <DigitalClock/>
+    </div>
 </template>
 
 <script>
 import DigitalClock from '../components/DigitalClock.vue'
 
 export default {
-  name: 'Clock',
+    name: 'Clock',
 
-  components: {
-    DigitalClock,
-  },
+    components: {
+        DigitalClock
+    },
 
-  data() {
-    return {
-      //
+    data() {
+        return {
+            //
+        }
+    },
+
+    methods: {
+        //
     }
-  },
-
-  methods: {
-    //
-  },
 }
 </script>
 
