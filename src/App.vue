@@ -8,7 +8,7 @@
         <span> | </span>
         <router-link :to="{ name: 'Clock' }">Clock</router-link>
     </div>
-    <router-view/>
+    <router-view />
 </template>
 
 <style lang="scss">

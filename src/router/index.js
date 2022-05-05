@@ -7,12 +7,12 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: Home,
     },
     {
         path: '/clock',
         name: 'Clock',
-        component: Clock
+        component: Clock,
     },
     // catch-all 404 example
     // will catch any routes that are not covered by routes defined in this file
@@ -20,13 +20,13 @@ const routes = [
     {
         path: '/:catchAll(.*)',
         name: 'NotFound',
-        component: NotFound
-    }
+        component: NotFound,
+    },
 ]
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
-    routes
+    routes,
 })
 
 export default router
