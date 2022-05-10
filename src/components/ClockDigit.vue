@@ -1,16 +1,8 @@
 <template>
     <span class="clock-digit_wrapper">
-        <span class="clock-digit_placeholder">
-            <span>8</span>
+        <span class="clock-digit_placeholder">8</span>
 
-            <span>8</span>
-        </span>
-
-        <span class="clock-digit_time">
-            <span>{{ first }}</span>
-
-            <span>{{ second }}</span>
-        </span>
+        <span class="clock-digit_time">{{ digit }}</span>
     </span>
 </template>
 
@@ -19,8 +11,8 @@ export default {
     name: 'ClockDigit',
 
     props: {
-        digits: {
-            type: Number,
+        digit: {
+            type: String,
             required: true,
         },
     },
@@ -38,4 +30,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.clock-digit_placeholder {
+    color: #f3f4f6;
+}
+
+.clock-digit_time {
+    color: #374151;
+    position: absolute;
+    right: 0;
+}
+</style>
