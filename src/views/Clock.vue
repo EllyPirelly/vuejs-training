@@ -2,7 +2,7 @@
     <div class="about">
         <h1>Digital Clock</h1>
         <p>Enter witty text here.</p>
-        <DigitalClock/>
+        <DigitalClock />
     </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     name: 'Clock',
 
     components: {
-        DigitalClock
+        DigitalClock,
     },
 
     data() {
@@ -24,7 +24,7 @@ export default {
 
     methods: {
         //
-    }
+    },
 }
 </script>
 
