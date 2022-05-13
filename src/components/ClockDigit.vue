@@ -19,7 +19,6 @@ export default {
 
     computed: {
         first() {
-            console.log('this.digits: ', this.digits)
             return this.digits.split()[0]
         },
 
